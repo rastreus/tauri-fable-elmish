@@ -9,7 +9,7 @@ module Import =
 
     [<Erase>]
     type Tauri =
-        [<Import("invoke", "@tauri-apps/api/tauri")>]
+        [<Import("invoke", "@tauri-apps/api/core")>]
         static member invoke(cmd : string, ?invokeParams : obj) : JS.Promise<_> = jsNative
 
 [<JSX.Component>]
