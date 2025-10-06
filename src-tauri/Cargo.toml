@@ -1,19 +1,25 @@
 [package]
 name = "tauri-fable-elmish"
-version = "0.1.0"
+version = "0.2.0"
 description = "Tauri + Fable Elmish Template"
 authors = ["Russell Dillin"]
-edition = "2021"
+edition = "2024"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[lib]
+name = "app_lib"
+path = "src/lib.rs"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
 [build-dependencies]
-tauri-build = { version = "1.5", features = [] }
+tauri-build = { version = "2", features = [] }
 
 [dependencies]
-tauri = { version = "1.5", features = ["shell-open"] }
-serde = { version = "1.0", features = ["derive"] }
-serde_json = "1.0"
+tauri = { version = "2", features = [] }
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.145"
+tauri-plugin-shell = "2"
 
 [features]
 # this feature is used for production builds or when `devPath` points to the filesystem

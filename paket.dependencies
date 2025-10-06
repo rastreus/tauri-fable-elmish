@@ -1,15 +1,15 @@
-version 8.0.3
+version 9.0.2
 source https://api.nuget.org/v3/index.json
 
 group Src
     source https://api.nuget.org/v3/index.json
-    framework: net8.0
+    framework: net9.0
     storage: none
 
-    nuget FSharp.Core == 8.0.200
-    nuget Fable.Core ~> 4
+    nuget FSharp.Core == 9.0.303
+    nuget Fable.Core >= 4.5.0
     nuget Fable.Promise == 3.2.0
     nuget Feliz >= 2.7.0
-    nuget Fable.Elmish.React ~> 4
+    nuget Fable.Elmish.React ~> 5
     nuget Fable.Elmish.Debugger ~> 4
-    nuget Fable.Elmish.HMR ~> 7
+    nuget Fable.Elmish.HMR ~> 8
